@@ -1,0 +1,20 @@
+@charset "EUC-KR";
+.wrap{
+	border:1px #000 solid;
+	width:30%;
+}
+.wrap > div{
+	border-bottom: 1px #000 solid;
+}
+.nav > a {
+	margin-left: 30px;
+}
+.left{
+	text-align: left;	
+}
+.right{
+	text-align: right;	
+}
+.center{
+	text-align: center;	
+}
