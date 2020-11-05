@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>사슴에 관하여</title>
+  </head>
+  <body>
+    <input type="text" id="firstColor" />
+    <input type="text" id="secondColor" />
+    <input type="text" id="threeColor" />
+    <input
+      type="button"
+      value="change!"
+      onclick="backgroundColorChangeToColorTextInput()"
+    />
+    
+    <script>
+      function backgroundColorChangeToColorTextInput() {
+        const typefirstColor = document.getElementById('firstColor');
+        // <input type="text" id="firstColor" value="red"/>
+        const typesecondColor = document.getElementById('secondColor');
+        const typethreeColor = document.getElementById('threeColor');
+
+        setTimeout(
+          () => (document.body.style.background = typefirstColor.value),
+          1000,
+        );
+        setTimeout(
+          () => (document.body.style.background = typesecondColor.value),
+          2000,
+        );
+        setTimeout(
+          () => (document.body.style.background = typethreeColor.value),
+          3000,
+        );
+      }
+
+      //     if (
+      //       typeColor.value === 'red' 
+      //       typeColor.value === 'blue' 
+      //       typeColor.value === 'yellow'
+      //     ) {
+      //       alert(typeColor.value);
+      //       document.body.style.background = typeColor.value;
+      //     } else {
+      //       alert('지원하지 않은 색입니다.(red/blue/yellow 중에 입력해주십시요)');
+      //     }
+      //   }
+    </script>
+
+    <a> 사슴에 관한 진실. </a>
+  </body>
+  <script>
+    for (const elsm of document.body.children) {
+      alert(elem.text);
+    }
+    //alert(document.title);
+  </script>
+</html>

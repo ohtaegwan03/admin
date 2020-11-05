@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>사슴에 관하여</title>
+</head>
+<body>
+        <input type ="text" id="color">
+        <input type="button" value="change"
+            onclick="backgroundColorChangeToColorTextInput()">
+    <script>
+        function backgroundColorChangeToColorTextInput(){
+        let typedColor = document.getElementById("color");
+        alert(typedColor.value);
+        let typeColor = document.body.style.background = "color";
+        alert(typedColor.value);
+        document.body.style.background = (typedColor.value);
+        //이제 받아온 값으로 body의 backgroud를 바꿀수 있도록
+      }
+</script>
+    <a>
+            사슴은 아름다운 동물입니다.
+    </a>
+</body>
+</html>
