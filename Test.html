@@ -10,14 +10,18 @@
 		// 배경을 붉은색으로 변경하기
 	document.body.style.background = "purple";
 
-// 1초 후 원상태로 복구하기
-setTimeout(() => document.body.style.background = "yellow", 1000);
-setTimeout(() => document.body.style.background = "orange", 2000);
-setTimeout(() => document.body.style.background = "green", 3000);
-setTimeout(() => document.body.style.background = "blue", 4000);
-setTimeout(() => document.body.style.background = "purple", 5000);
-setTimeout(() => document.body.style.background = "", 6000);
-	</script>
+	// 1초 후 원상태로 복구하기
+	function Colorchange(){
+	setTimeout(() => document.body.style.background = "yellow", 1000);
+	setTimeout(() => document.body.style.background = "orange", 2000);
+	setTimeout(() => document.body.style.background = "green", 3000);
+	setTimeout(() => document.body.style.background = "blue", 4000);
+	setTimeout(() => document.body.style.background = "purple", 5000);
+	setTimeout(() => document.body.style.background = "", 6000);
+	}
+setInterval(Colorchange, 7000);
+		alert(`${navigator.userAgent}, ${navigator.platform}`)
+</script>
 	<div class="wrap">
 	
 		<div class="logo"> 
