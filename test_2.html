@@ -1,0 +1,48 @@
+<!DOCTYPE HEML>
+<html>
+<head>
+    <title>chageBackgroundColor</title>
+</head>
+<body>
+    <!-- <input type="text" id="color"> -->
+    <input type="text" id="firstColor">
+    <input type="text" id="secondColor">
+    <input type="text" id="thirdColor">
+    <input type="button" value="submit" onclick="BackgroundthreeColor()">
+    <input type="button" value="reset" onclick="resetButton()">
+    <!-- <input type="button" value="change!" onclick="backgroundColorChangeToColorTextInput()"> -->
+<script>
+    // function backgroundColorChangeToColorTextInput(){
+    //     let typedColor = document.getElementById("color");
+    //     alert(typedColor.value);
+    //     if(typedColor.value === "red"  typedColor.value === "blue"  typedColor.value === "green"){
+    //         document.body.style.background = typedColor.value;
+    //     }else{
+    //         alert("지원하지않는 색상입니다.");
+    //     }
+    // }
+    function BackgroundthreeColor(){
+        let typedColor_1 = document.getElementById("firstColor");
+        let typedColor_2 = document.getElementById("secondColor");
+        let typedColor_3 = document.getElementById("thirdColor");
+        alert(typedColor_1.value);
+        alert(typedColor_2.value);
+        alert(typedColor_3.value);
+        setInterval(() => document.body.style.background = typedColor_1.value, 1000);
+        setInterval(() => document.body.style.background = typedColor_2.value, 2000);
+        setInterval(() => document.body.style.background = typedColor_3.value, 3000);
+    }
+    function resetButton(){
+        typedColor_1 = document.getElementById("firstColor");
+        typedColor_2 = document.getElementById("secondColor");
+        typedColor_3 = document.getElementById("thirdColor");
+        typedColor_1.value = "";
+        typedColor_2.value = "";
+        typedColor_3.value = "";
+    }
+    for(const elem of document.body.children){
+        alert(elem.text);
+    }
+</script>
+</body>
+</html>

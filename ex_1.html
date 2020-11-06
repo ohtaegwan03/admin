@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>사슴에 관하여</title>
+</head>
+<body>
+    <input type="text" name="toChangeColor">
+    <input type="number" name="toChangeTimeoutNumber">
+    <input type="button" value="change!" 
+        onclick="changeToColors()">
+    <script>
+        function changeToColors() {
+             const elements = document.getElementsByName("textinput");
+             elements = document.getElementById("toChangeTimeoutNumber");
+             for (const elem of elements) {
+            setTimeout(() => document.body.style.background = elem.value, elem.value);
+             }
+        }
+    </script>
+    <a>
+        사슴은 아름다운 동물입니다
+    </a>
+</body>
+
+</html>
