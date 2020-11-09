@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title></title>
+    <body>
+        이름
+        <input type="text" id="name"> <br/>
+        이메일
+        <input type="text" id="email"> <br/>
+        제목
+        <input type="text" id="title"> <br/>
+        설명
+        <input type="text" id="explanation"> <br/>
+        <input type="button" value="제출"onclick="validation_check()"> 
+        <input type="button" value="다시쓰기"onclick="reset()">
+        <script>
+            function validation_check(){
+            const name = document.getElementById("name").value;
+                if(2 > name.length || name.length > 10){
+                    alert("이름은 2~10 글자 사이어야만 합니다");
+                    return false;
+                }
+
+                const email = document.getElementById("email").value;
+                if(email.split("@").length !== 2){
+                    alert("@는 하나만 들어가야합니다")
+                }
+
+                const title = document.getElementById("title").value;
+                if(!(title.includes("[") || title.includes("]"))){
+                    alert("[분류] 제목과 같은 포멧으로 작성하여야합니다");
+                    return false;
+                }
+
+            const explanation = document.getElementById("explanation").value;
+            if(explanation > 100){
+                alert("이름은 100글자 이하여야 합니다.");
+                return false;
+                }
+
+                alert("제출되었습니다!")
+            }
+
+            function reset(){
+                let arr = document.querySelectorAll("input[type=text]");
+                for(const elements of arr){
+                    elements.value = "";
+                }
+            }
+        </script>
+    </body>
+</head>
+</html>
