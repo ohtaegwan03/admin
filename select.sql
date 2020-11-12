@@ -262,7 +262,8 @@ SELECT
 FROM
     product
 where
-    price <=10000000
+    price <= 10000000
+    
 GROUP BY 
     category_id
 
